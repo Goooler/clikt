@@ -35,34 +35,32 @@ subprojects {
 
     tasks.withType<KotlinJvmCompile>().configureEach {
         compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_1_8)
+            jvmTarget = JvmTarget.JVM_1_8
         }
     }
     tasks.withType<JavaCompile>().configureEach {
-        options.release.set(8)
+        options.release = 8
     }
 
     pluginManager.withPlugin("com.vanniktech.maven.publish") {
         apply(plugin = "org.jetbrains.dokka")
 
         tasks.named<DokkaTask>("dokkaHtml") {
-            outputDirectory.set(rootProject.rootDir.resolve("docs/api"))
+            outputDirectory = rootProject.rootDir.resolve("docs/api")
             val rootPath = rootProject.rootDir.toPath()
             val logoCss = rootPath.resolve("docs/css/logo-styles.css").toString().replace('\\', '/')
             val paletteSvg = rootPath.resolve("docs/img/wordmark_small_dark.svg").toString()
                 .replace('\\', '/')
-            pluginsMapConfiguration.set(
-                mapOf(
+            pluginsMapConfiguration = mapOf(
                     "org.jetbrains.dokka.base.DokkaBase" to """{
                 "customStyleSheets": ["$logoCss"],
                 "customAssets": ["$paletteSvg"],
                 "footerMessage": "Copyright &copy; 2021 AJ Alt"
             }"""
-                )
-            )
+                    )
             dokkaSourceSets.configureEach {
-                reportUndocumented.set(false)
-                skipDeprecated.set(true)
+                reportUndocumented = false
+                skipDeprecated = true
             }
         }
     }

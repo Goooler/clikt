@@ -1,3 +1,3 @@
 application {
-    mainClass.set("com.github.ajalt.clikt.samples.aliases.MainKt")
+    mainClass = "com.github.ajalt.clikt.samples.aliases.MainKt"
 }

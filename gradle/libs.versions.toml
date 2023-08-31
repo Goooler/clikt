@@ -11,7 +11,7 @@ jimfs = "com.google.jimfs:jimfs:1.2"
 
 # used in samples
 kodein = "org.kodein.di:kodein-di-generic-jvm:5.2.0"
-kotlinx-serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.5.1"
+kotlinx-serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0"
 
 [plugins]
 dokka = "org.jetbrains.dokka:1.8.20"

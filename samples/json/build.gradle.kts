@@ -3,7 +3,7 @@ plugins {
 }
 
 application {
-    mainClass.set("com.github.ajalt.clikt.samples.json.MainKt")
+    mainClass = "com.github.ajalt.clikt.samples.json.MainKt"
 }
 
 dependencies {

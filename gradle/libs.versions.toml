@@ -14,5 +14,6 @@ kodein = "org.kodein.di:kodein-di-generic-jvm:6.5.5"
 kotlinx-serialization = "org.jetbrains.kotlinx:kotlinx-serialization-json:1.6.0"
 
 [plugins]
+kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 dokka = "org.jetbrains.dokka:1.8.20"
 publish = "com.vanniktech.maven.publish:0.25.3"
